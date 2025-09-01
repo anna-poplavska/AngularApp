@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+//Pipe that highlights parts that matches search query
+
 @Pipe({
   name: 'highlighter'
 })

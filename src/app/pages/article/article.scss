@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@import '../../styles/mixins.scss';
 
 .article {
   height: 100%;
@@ -20,18 +21,10 @@
   }
 
   &__card {
-    margin-bottom: 35px;
-    box-shadow: 0px 8px 24px 0px #0000000d;
-    padding: 35px 75px 50px 75px;
+    @include cardContainer;
 
-    @include mat.card-overrides(
-      (
-        outlined-container-color: #ffffff,
-        outlined-container-shape: 5px,
-        outlined-outline-color: #eaeaea,
-        outlined-outline-width: 1px,
-      )
-    );
+    margin-bottom: 35px;
+    padding: 35px 75px 50px 75px;
   }
 
   &__header {
@@ -42,7 +35,7 @@
   }
 
   &__title {
-    color: #363636;
+    color: var(--title-color);
 
     @include mat.card-overrides(
       (
@@ -66,7 +59,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: normal;
-    color: #363636;
+    color: var(--text-color);
   }
 
   &__link {
@@ -78,13 +71,32 @@
         text-label-text-font: Montserrat,
         text-label-text-size: 16px,
         text-label-text-weight: 700,
-        text-label-text-color: #363636,
+        text-label-text-color: var(--link-color),
         text-with-icon-horizontal-padding: 0,
       )
     );
+
+     &--icon {
+      margin: 0;
+      font-size: 16px;
+      line-height: normal;
+      width: fit-content;
+      height: fit-content;
+
+      @include mat.icon-overrides(
+        (
+          color: var(--link-color),
+        )
+      );
+    }
   }
 }
 
 .mat-mdc-card-content:last-child {
   padding: 0;
+}
+
+.mat-mdc-button>.mat-icon {
+    margin-right: 6px;
+    margin-left: 0;
 }

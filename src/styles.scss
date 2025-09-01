@@ -3,6 +3,13 @@ body {
   height: 100%;
 }
 body {
+  --title-color: #363636;
+  --text-color: #363636;
+  --link-color: #363636;
+  --border-color: #eaeaea;
+  --border-hover-color: #b3b3b3;
+  --background-color: #ffffff;
+
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
@@ -10,4 +17,6 @@ body {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: normal;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }

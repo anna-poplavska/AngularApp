@@ -1,17 +1,10 @@
 @use '@angular/material' as mat;
+@import '../../styles/mixins.scss';
 
 .card {
-  cursor: pointer;
-  box-shadow: 0px 8px 24px 0px #0000000d;
+  @include cardContainer;
 
-  @include mat.card-overrides(
-    (
-      outlined-container-color: #ffffff,
-      outlined-container-shape: 5px,
-      outlined-outline-color: #eaeaea,
-      outlined-outline-width: 1px,
-    )
-  );
+  cursor: pointer;
 
   &__header {
     padding: 25px 25px 20px 25px;
@@ -28,7 +21,7 @@
     align-items: center;
     gap: 8px;
     margin: 0 0 24px;
-    color: #363636;
+    color: var(--title-color);
     opacity: 60%;
 
     @include mat.card-overrides(
@@ -61,7 +54,7 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
-    color: #363636;
+    color: var(--title-color);
 
     @include mat.card-overrides(
       (
@@ -84,7 +77,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: normal;
-    color: #363636;
+    color: var(--text-color);
   }
 
   &__actions {
@@ -97,7 +90,7 @@
         text-label-text-font: Montserrat,
         text-label-text-size: 16px,
         text-label-text-weight: 700,
-        text-label-text-color: #363636,
+        text-label-text-color: var(--link-color),
         text-with-icon-horizontal-padding: 0,
       )
     );
@@ -105,9 +98,28 @@
     &:hover {
       opacity: 60%;
     }
+
+     &--icon {
+      margin: 0;
+      font-size: 16px;
+      line-height: normal;
+      width: fit-content;
+      height: fit-content;
+
+      @include mat.icon-overrides(
+        (
+          color: var(--link-color),
+        )
+      );
+    }
   }
 }
 
 ::ng-deep .highlight-text {
   background: #fff96e;
+}
+
+::ng-deep .mat-mdc-button .mdc-button__label+.mat-icon {
+    margin-right: 0;
+    margin-left: 6px;
 }

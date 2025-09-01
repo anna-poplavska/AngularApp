@@ -6,6 +6,7 @@
       ><mat-icon class="card__subtitle--icon">calendar_today</mat-icon>
       {{ provideDate(article().published_at) }}
     </mat-card-subtitle>
+
     <mat-card-title
       class="card__title"
       [innerHTML]="article().title | highlighter : searchQuery()"
@@ -21,7 +22,8 @@
 
   <mat-card-actions class="card__actions">
     <button matButton class="card__link" (click)="navigateToArticle(article().id)">
-      Read more <mat-icon class="card__link--icon" iconPositionEnd>arrow_right_alt</mat-icon>
+      Read more
+      <mat-icon class="card__link--icon" iconPositionEnd>arrow_right_alt</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>

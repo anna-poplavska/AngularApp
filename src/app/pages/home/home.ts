@@ -39,6 +39,7 @@ export class Home implements OnInit {
   }
 
   constructor() {
+    // check if search query is updated and then filter articles
     effect(() => {
       if (!this.searchQuery) {
         this.filteredArticleItems.set(this.articleItems());

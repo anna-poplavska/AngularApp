@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { ArticlesType, ArticleType } from '../types/article.type';
 
+//Service to get info about article(-s) from API
+//https://spaceflightnewsapi.net/
+
 @Injectable({
   providedIn: 'root'
 })

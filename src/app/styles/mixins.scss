@@ -1,0 +1,14 @@
+//mixin for card container
+
+@mixin cardContainer {
+  box-shadow: 0px 8px 24px 0px #0000000d;
+
+  @include mat.card-overrides(
+    (
+      outlined-container-color: var(--background-color),
+      outlined-container-shape: 5px,
+      outlined-outline-color: var(--border-color),
+      outlined-outline-width: 1px,
+    )
+  );
+}

@@ -1,13 +1,16 @@
 <div class="home">
   <form class="home__search">
     <label class="home__search--label">Filter by keywords</label>
+
     <mat-form-field appearance="outline" subscriptSizing="dynamic" class="home__search--input">
       <input matInput name="searchQuery" [(ngModel)]="searchQuery" placeholder="Search..." />
+
       <mat-icon class="home__search--icon" matPrefix>search</mat-icon>
     </mat-form-field>
   </form>
 
   <p class="home__count">Results: {{ articleCount() }}</p>
+
   <div class="home__border"></div>
 
   <ul class="home__list">

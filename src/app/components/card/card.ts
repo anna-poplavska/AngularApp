@@ -1,7 +1,7 @@
 import { Component, inject, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { ArticleType } from '../../types/article.type';
 import { Router } from '@angular/router';
 import { HighlighterPipe } from '../../pipes/highlighter-pipe';
@@ -17,6 +17,7 @@ export class Card {
   searchQuery = input('');
   private router = inject(Router);
 
+  // return correct date string
   provideDate(date: string): string {
     const dateArray = date.slice(0, 10).split('-');
     if (dateArray.length === 0) {
@@ -53,6 +54,7 @@ export class Card {
     this.router.navigate(['/article', articleId]);
   }
 
+  //if description is more than 100 characters, it cut it and add ...
   limitDescription(description: string) {
     if (description.length <= 100) {
       return description;

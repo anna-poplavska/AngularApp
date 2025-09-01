@@ -15,6 +15,7 @@
       font-size: 16px;
       line-height: 100%;
       letter-spacing: normal;
+      color: var(--text-color);
     }
 
     &--input {
@@ -29,14 +30,19 @@
           outlined-container-shape: 5px,
           outlined-outline-width: 1px,
           outlined-focus-outline-width: 1px,
-          outlined-outline-color: #eaeaea,
-          outlined-focus-outline-color: #b3b3b3,
-          outlined-hover-outline-color: #eaeaea,
+          outlined-outline-color: var(--border-color),
+          outlined-focus-outline-color: var(--border-hover-color),
+          outlined-hover-outline-color: var(--border-hover-color),
           outlined-input-text-placeholder-color: #575757,
         )
       );
     }
+
     &--icon {
+      font-size: 20px;
+      line-height: normal;
+      width: fit-content;
+      height: fit-content;
       color: #575757;
     }
   }
@@ -48,12 +54,13 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: normal;
+    color: var(--text-color);
   }
 
   &__border {
     margin: 0 0 45px 0;
     height: 1px;
-    background-color: #eaeaea;
+    background-color: var(--border-color);
   }
 
   &__list {

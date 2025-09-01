@@ -1,0 +1,27 @@
+<mat-card (click)="navigateToArticle(article().id)" class="card" appearance="outlined">
+  <img class="card__image" mat-card-image [src]="article().image_url" alt="Photo of an article" />
+
+  <mat-card-header class="card__header">
+    <mat-card-subtitle class="card__subtitle"
+      ><mat-icon class="card__subtitle--icon">calendar_today</mat-icon>
+      {{ provideDate(article().published_at) }}
+    </mat-card-subtitle>
+    <mat-card-title
+      class="card__title"
+      [innerHTML]="article().title | highlighter : searchQuery()"
+    ></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="card__content">
+    <p
+      class="card__description"
+      [innerHTML]="limitDescription(article().summary) | highlighter : searchQuery()"
+    ></p>
+  </mat-card-content>
+
+  <mat-card-actions class="card__actions">
+    <button matButton class="card__link" (click)="navigateToArticle(article().id)">
+      Read more <mat-icon class="card__link--icon" iconPositionEnd>arrow_right_alt</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

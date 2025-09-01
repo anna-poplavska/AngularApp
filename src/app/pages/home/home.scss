@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+
+.home {
+  padding: 50px 75px;
+
+  &__search {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--label {
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: normal;
+    }
+
+    &--input {
+      cursor: pointer;
+      width: min(50%, 600px);
+      box-shadow: 0px 8px 24px 0px #0000000d;
+
+      @include mat.form-field-overrides(
+        (
+          container-vertical-padding: 13px,
+          container-height: 50px,
+          outlined-container-shape: 5px,
+          outlined-outline-width: 1px,
+          outlined-focus-outline-width: 1px,
+          outlined-outline-color: #eaeaea,
+          outlined-focus-outline-color: #b3b3b3,
+          outlined-hover-outline-color: #eaeaea,
+          outlined-input-text-placeholder-color: #575757,
+        )
+      );
+    }
+    &--icon {
+      color: #575757;
+    }
+  }
+
+  &__count {
+    margin: 0 0 5px 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: normal;
+  }
+
+  &__border {
+    margin: 0 0 45px 0;
+    height: 1px;
+    background-color: #eaeaea;
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 90px) / 3));
+    column-gap: 45px;
+    row-gap: 45px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, calc((100% - 45px) / 2));
+    }
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,55 @@
+<div class="article">
+  <img class="article__image" [src]="article().image_url" alt="Picture of article" />
+  <div class="article__container">
+    <mat-card class="article__card" appearance="outlined">
+      <mat-card-header class="article__header">
+        <mat-card-title class="article__title">{{ article().title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content class="article__content">
+        <!-- There is no full description so I added 3 lorem paragraphs  -->
+        <p class="article__description">
+          {{ article().summary }}<br />
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel bibendum purus.
+          Integer blandit sem nec leo eleifend mollis. Nunc sed est pellentesque, eleifend massa at,
+          finibus lacus. Maecenas mi est, congue quis nisi vel, consectetur maximus erat. Sed
+          viverra, magna id ullamcorper egestas, sapien nisi tristique orci, non molestie sem lectus
+          quis eros. Donec neque ligula, pharetra vitae ante vel, ullamcorper scelerisque est.
+          Pellentesque tincidunt interdum felis, vel accumsan diam commodo a. Sed tortor eros,
+          pellentesque nec hendrerit sit amet, vestibulum sed magna. Aenean efficitur diam quis
+          lacus euismod lobortis. Vestibulum vulputate dui et elit varius consequat vulputate eu
+          neque. <br />
+          <br />
+          Nunc accumsan erat justo, quis dapibus odio efficitur ac. Maecenas mattis, justo in
+          feugiat vulputate, sapien enim sagittis erat, at pulvinar lacus nibh vitae sem. Nullam
+          dolor tortor, tincidunt a rhoncus nec, sollicitudin bibendum lacus. Quisque molestie est
+          cursus rhoncus sollicitudin. Sed eu nulla efficitur, convallis ligula vitae, imperdiet
+          lacus. Sed fermentum nisl molestie elementum facilisis. Proin mauris magna, maximus eget
+          convallis nec, sagittis a mauris. Aliquam blandit fringilla iaculis. Ut aliquet
+          condimentum metus, eu cursus mi dignissim quis. Donec ac risus vitae tellus posuere
+          bibendum. Cras orci tellus, pretium eu libero sit amet, euismod dictum libero. Curabitur
+          at dignissim lacus, quis volutpat ligula. Sed sodales sem aliquet odio commodo iaculis.
+          Donec vestibulum scelerisque ex, facilisis euismod nulla efficitur quis. Nunc at porttitor
+          massa.<br />
+          <br />
+          Duis condimentum lectus a posuere aliquet. Aliquam mollis venenatis felis, vel vehicula
+          nisl ultrices elementum. Sed vitae elit et dolor pretium viverra. Phasellus congue, eros
+          sed facilisis vestibulum, nibh libero venenatis velit, sit amet maximus massa dolor ac
+          tortor. Vestibulum malesuada sollicitudin est, nec pulvinar nulla auctor nec. Quisque
+          dictum in ex vitae porttitor. Sed varius ligula id vestibulum pellentesque. Aenean non
+          metus tincidunt, auctor odio consectetur, facilisis nisl. Nulla porttitor mattis ex, sit
+          amet consequat enim. Cras viverra odio sed metus scelerisque, sed vulputate libero rutrum.
+          Donec semper est vitae risus ultricies facilisis. Phasellus eleifend mauris elit, sed
+          sodales eros varius sit amet. Vivamus in massa imperdiet, tincidunt nisl sed, iaculis
+          libero.
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <a matButton class="article__link" routerLink="/">
+      <mat-icon class="article__link--icon">arrow_back</mat-icon>
+      Back to homepage
+    </a>
+  </div>
+</div>
